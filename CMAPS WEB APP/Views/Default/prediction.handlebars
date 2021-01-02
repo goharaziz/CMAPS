@@ -1,0 +1,342 @@
+<div class="row" id="main_div_index" style="background-image: url(./security1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+    
+    <div class="col-md-8">
+            
+        <div class="jumbotron" style="margin-top: 50px;">
+            <img src="./logo.jpg" alt="logo" style="width: 30%; height: 10%; float:right;">
+            <h1 class="display-3">CMAPS</h1>
+            
+            <p class="lead"><small>Crime Mapping Analysis and Prediction System</small></p>
+            <p class="text-info">The Complete Security System</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card card-register mx-auto my-5">                        
+                <form class="row" action="/prediction" method="POST" autocomplete="off" style="padding: 10px;">
+
+                    <div class="form-group-sm col-sm-12" style="margin-top: 5px;">
+                        <label for="posting">Posting</label>
+                        <select name="posting" id="posting" class="form-control" required>
+                            <option value="AllamaIqbalTown">Allama Iqbal Town</option>
+                            <option value="Anarkali">Anarkali</option>
+                            <option value="BarkiRoad">Barki Road</option>
+                            <option value="Cantt">Cantt</option>
+                            <option value="Chung">Chung</option>
+                            <option value="DefenceA">Defence A</option>
+                            <option value="FaisalTown">Faisal Town</option>
+                            <option value="GardenTown">Garden Town</option>
+                            <option value="GreenTown">Green Town</option>
+                            <option value="Gulberg">Gulberg</option>
+                            <option value="GulshanRavi">Gulshan Ravi</option>
+                            <option value="Hadyara">Hadyara</option>
+                            <option value="Ichra">Ichra</option>
+                            <option value="JoharTown">Johar Town</option>
+                            <option value="LytonRoad">Lyton Road</option>
+                            <option value="ModelTown">Model Town</option>
+                            <option value="Mozang">Mozang</option>
+                            <option value="MughalPura">Mughal Pura</option>
+                            <option value="MuslimTown">Muslim Town</option>
+                            <option value="RaceCourse">Race Course</option>
+                            <option value="Raiwind">Raiwind</option>
+                            <option value="RaviRoad">Ravi Road</option>
+                            <option value="Sabzazar">Sabzazar</option>
+                            <option value="SamanAbad">Samanabad</option>
+                            <option value="SarwarRoad">Sarwar Road</option>
+                            <option value="Shadbagh">Shadbagh</option>
+                            <option value="Shadman">Shadman</option>
+                            <option value="ShadraTown">Shadra Town</option>
+                        </select>
+                    </div>
+                                    
+                    <div class="form-group-sm col-sm-4" style="margin-top: 5px;">
+                        <label for="date">Date</label>
+                        <input type="number" min="1" max="31" class="form-control" id="date" name="date" placeholder="dd" required>
+                    </div>
+
+                    <div class="form-group-sm col-sm-4" style="margin-top: 5px;">
+                        <label for="month">Month</label>
+                        <input type="number" min="1" max="12" class="form-control" id="month" name="month" placeholder="mm" required>
+                    </div>
+
+                    <div class="form-group-sm col-sm-4" style="margin-top: 5px;">
+                        <label for="year">Year</label>
+                        <input type="number" min="2000" max="9999" class="form-control" id="year" name="year" placeholder="yyyy" required>
+                    </div>
+
+                    <div class="form-group-sm col-sm-12" style="margin-top: 5px;">
+                        <label for="day">Day</label>
+                        <select name="day" id="day" class="form-control" required>
+                            <option value="1">Monday</option>
+                            <option value="4">Tuesday</option>
+                            <option value="6 ">Wednesday</option>
+                            <option value="5">Thursday</option>
+                            <option value="0">Friday</option>
+                            <option value="2">Saturday</option>
+                            <option value="3">Sunday</option>
+                        </select>
+                    </div>                
+
+                    
+                    <div class="form-group-sm col-sm-12" style="margin-top: 5px;">
+                        <label for="time"><strong>Time</strong></label>
+                        <hr>
+                        <span class="badge badge-pill badge-info">Choose Hour and Minutes for the time you want to Predict</span>,
+                        <span class="badge badge-pill badge-info">For AM Hours will be 1-12 / For PM Hours will be 13-24</span>
+                    </div>
+
+                    <div class="form-group-sm col-sm-6" style="margin-top: 5px;">
+                        <label for="hours">Hours</label>
+                        <input type="number" class="form-control" id="hours" name="hours" placeholder="Enter The Time of crime" required>
+                    </div>
+
+                    <div class="form-group-sm col-sm-6" style="margin-top: 5px;">
+                        <label for="minutes">Minutes</label>
+                        <input type="number" class="form-control" id="minutes" name="minutes" placeholder="Enter The Time of crime" required>
+                    </div>                
+
+                    <div class="form-group-sm col-md-12" style="margin-top: 5px;">
+                        <label for="partOfTheDay">Part of the Day</label>
+                        <small id="emailHelp" class="form-text text-muted">
+                            Select  <span class="badge badge-pill badge-info">1 for 12AM-4AM</span> ,
+                                    <span class="badge badge-pill badge-info">2 for 4AM-8AM</span>,
+                                    <span class="badge badge-pill badge-info">3 for 8AM-12PM</span>,
+                                    <span class="badge badge-pill badge-info">4 for 12PM-4PM</span>,
+                                    <span class="badge badge-pill badge-info">4 for 4PM-8PM</span>,
+                                    <span class="badge badge-pill badge-info">4 for 8PM-12AM</span>.
+                        </small>
+                        <select name="partOfTheDay" id="partOfTheDay" class="form-control" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-12" style="margin-top: 5px;">
+                        <button class="btn btn-outline-success btn-sm" id="submit" type="submit" style="margin-top: 5px;">
+                            <i class="fa fa-database" aria-hidden="true">Predict</i>
+                        </button>            
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card card-register mx-auto my-5">                        
+                <form class="row" action="/predictionTwo" method="POST" autocomplete="off" style="padding: 10px;">
+
+                    <div class="form-group-sm col-sm-12" style="margin-top: 5px;">
+                        <label for="crime">Crime</label>
+                        <select name="crime" id="crime" class="form-control" required>
+                            <option value="Outraging the Modesty of Women">Outraging the Modesty of Women</option>
+                            <option value="Other Crime">Other Crime</option>
+                            <option value="Punjab Arms Ordinance Bill of 2015">Punjab Arms Ordinance Bill of 2015</option>
+                            <option value="Punjab Information Temporary Residence Ordinance">Punjab Information Temporary Residence Ordinance</option>
+                            <option value="Rape">Rape</option>
+                            <option value="M/Cycle Theft">M/Cycle Theft</option>
+                            <option value="Burglary">Burglary</option>
+                            <option value="Robbery">Robbery</option>
+                            <option value="Kidnapping">Kidnapping</option>
+                            <option value="Non-Fatal Accident">Non-Fatal Accident</option>
+                            <option value="Cheque Dishonour">Cheque Dishonour</option>
+                            <option value="Miscellaneous">Miscellaneous</option>
+                            <option value="Kite Flying act">Kite Flying act</option>
+                            <option value="Begging Act">Begging Act</option>
+                            <option value="Anti-Norcotics Act">Anti-Norcotics Act</option>
+                            <option value="Punjab Security Ordinance 2015">Punjab Security Ordinance 2015</option>
+                            <option value="Overspeeding">Overspeeding</option>
+                            <option value="Other Vehicle Theft">Other Vehicle Theft</option>
+                            <option value="Hurt (personal feud)">Hurt (personal feud)</option>
+                            <option value="Punjab Sound System Regulation Ordinance">Punjab Sound System Regulation Ordinance</option>
+                            <option value="Attack on Govt. Servant">Attack on Govt. Servant</option>
+                            <option value="Narcotics">Narcotics</option>
+                            <option value="Illegal Extortion">Illegal Extortion</option>
+                            <option value="Electricity Act">Electricity Act</option>
+                            <option value="Car Theft">Car Theft</option>
+                            <option value="Gambling">Gambling</option>
+                            <option value="Arms Ordinance Act">Arms Ordinance Act</option>
+                            <option value="Anti-Terrorism Act">Anti-Terrorism Act</option>
+                            <option value="Price Control Act">Price Control Act</option>
+                            <option value="Fatal Accident">Fatal Accident</option>
+                            <option value="M/Cycle Snatching">M/Cycle Snatching</option>
+                            <option value="Attempted Murder">Attempted Murder</option>
+                            <option value="Murder">Murder</option>
+                            <option value="Punjab Local Government Ordinance 2016">Punjab Local Government Ordinance 2016</option>
+                            <option value="One Wheeling Act">One Wheeling Act</option>
+                            <option value="Loud Speaker Act">Loud Speaker Act</option>
+                            <option value="Secretarianism">Secretarianism</option>
+                            <option value="Anti-terrorism Act 1997 Ata">Anti-terrorism Act 1997 Ata</option>
+                            <option value="Punjab Marriage Function ordinance 2016">Punjab Marriage Function ordinance 2016</option>
+                            <option value="Tresspassing">Tresspassing</option>
+                            <option value="Ehtram-e-Ramzan">Ehtram-e-Ramzan</option>
+                            <option value="Smoking Health Ordinance">Smoking Health Ordinance</option>
+                            <option value="Blind Murder">Blind Murder</option>
+                            <option value="382 PPC">382 PPC</option>
+                            <option value="Telephone Act">Telephone Act</option>
+                            <option value="Car Snatching">Car Snatching</option>
+                            <option value="Illegal Gas Cylinder Act">Illegal Gas Cylinder Act</option>
+                            <option value="Kidnapping Minors">Kidnapping Minors</option>
+                            <option value="Dacoity/Robbery with Murder">Dacoity/Robbery with Murder</option>
+                            <option value="Habs e Beja">Habs e Beja</option>
+                            <option value="Dacoity">Dacoity</option>
+                            <option value="Punjab Food Authority Act 2011">Punjab Food Authority Act 2011</option>
+                            <option value="Cigrette Act">Cigrette Act</option>
+                            <option value="Gang Rape">Gang Rape</option>
+                            <option value="Police Order Act">Police Order Act</option>
+                            <option value="Kidnap for Ransom">Kidnap for Ransom</option>
+                            <option value="Dengue Act">Dengue Act</option>
+                            <option value="New Punjab Local Govt Ord 2011">New Punjab Local Govt Ord 2011</option>
+                            <option value="Police Encounter">Police Encounter</option>
+                            <option value="LDA Act 1975">LDA Act 1975</option>
+                            <option value="Punjab Fertilizers Control Act">Punjab Fertilizers Control Act</option>
+                            <option value="Prohibition of Expressing Matters on Walls Act 1995">Prohibition of Expressing Matters on Walls Act 1995</option>
+                            <option value="Copyright Act">Copyright Act</option>
+                            <option value="Touheen Quran Act">Touheen Quran Act</option>
+                            <option value="Local Government Act">Local Government Act</option>
+                            <option value="New Punjab Pure Food Ord 1960">New Punjab Pure Food Ord 1960</option>
+                            <option value="Petrolium Act 1934">Petrolium Act 1934</option>
+                            <option value="The Punjab Prohibition of Child Labour at Brick KIlns Ordinance 2016">The Punjab Prohibition of Child Labour at Brick KIlns Ordinance 2016</option>
+                            <option value="Punjab Animal Slaughter Control Act">Punjab Animal Slaughter Control Act</option>
+                            <option value="Protection of Pakistan Ordinance 2013">Protection of Pakistan Ordinance 2013</option>
+                            <option value="Regulation and Control of Loudspeakers and Amplifiers">Regulation and Control of Loudspeakers and Amplifiers</option>
+                            <option value="Canal Cut">Canal Cut</option>
+                            <option value="The Anti Terrorism Act (ATA),1997">The Anti Terrorism Act (ATA),1997</option>
+                            <option value="Other Vehicle Snatching">Other Vehicle Snatching</option>
+                            <option value="Tree Theft Act">Tree Theft Act</option>
+                            <option value="Railway Act">Railway Act</option>
+                            <option value="Punjab University Broads Act">Punjab University Broads Act</option>
+                        </select>
+                    </div>
+                                    
+                    <div class="form-group-sm col-sm-6" style="margin-top: 5px;">
+                        <label for="model">Model</label>
+                        <select name="model" id="model" class="form-control" required>
+                            <option value="area">Area</option>
+                            <option value="day">Day</option>
+                            <option value="month ">Month</option>
+                        </select>
+                    </div>                
+
+                    <div class="col-md-12" style="margin-top: 5px;">
+                        <button class="btn btn-outline-success btn-sm" id="submit" type="submit" style="margin-top: 5px;">
+                            <i class="fa fa-database" aria-hidden="true">Create Case</i>
+                        </button>            
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card card-register mx-auto my-5">                        
+                <form class="row" action="/predictionThree" method="POST" autocomplete="off" style="padding: 10px;">
+
+                    <div class="form-group-sm col-sm-12" style="margin-top: 5px;">
+                        <label for="crime">Crime</label>
+                        <select name="crime" id="crime" class="form-control" required>
+                            <option value="Outraging the Modesty of Women">Outraging the Modesty of Women</option>
+                            <option value="Other Crime">Other Crime</option>
+                            <option value="Punjab Arms Ordinance Bill of 2015">Punjab Arms Ordinance Bill of 2015</option>
+                            <option value="Punjab Information Temporary Residence Ordinance">Punjab Information Temporary Residence Ordinance</option>
+                            <option value="Rape">Rape</option>
+                            <option value="M/Cycle Theft">M/Cycle Theft</option>
+                            <option value="Burglary">Burglary</option>
+                            <option value="Robbery">Robbery</option>
+                            <option value="Kidnapping">Kidnapping</option>
+                            <option value="Non-Fatal Accident">Non-Fatal Accident</option>
+                            <option value="Cheque Dishonour">Cheque Dishonour</option>
+                            <option value="Miscellaneous">Miscellaneous</option>
+                            <option value="Kite Flying act">Kite Flying act</option>
+                            <option value="Begging Act">Begging Act</option>
+                            <option value="Anti-Norcotics Act">Anti-Norcotics Act</option>
+                            <option value="Punjab Security Ordinance 2015">Punjab Security Ordinance 2015</option>
+                            <option value="Overspeeding">Overspeeding</option>
+                            <option value="Other Vehicle Theft">Other Vehicle Theft</option>
+                            <option value="Hurt (personal feud)">Hurt (personal feud)</option>
+                            <option value="Punjab Sound System Regulation Ordinance">Punjab Sound System Regulation Ordinance</option>
+                            <option value="Attack on Govt. Servant">Attack on Govt. Servant</option>
+                            <option value="Narcotics">Narcotics</option>
+                            <option value="Illegal Extortion">Illegal Extortion</option>
+                            <option value="Electricity Act">Electricity Act</option>
+                            <option value="Car Theft">Car Theft</option>
+                            <option value="Gambling">Gambling</option>
+                            <option value="Arms Ordinance Act">Arms Ordinance Act</option>
+                            <option value="Anti-Terrorism Act">Anti-Terrorism Act</option>
+                            <option value="Price Control Act">Price Control Act</option>
+                            <option value="Fatal Accident">Fatal Accident</option>
+                            <option value="M/Cycle Snatching">M/Cycle Snatching</option>
+                            <option value="Attempted Murder">Attempted Murder</option>
+                            <option value="Murder">Murder</option>
+                            <option value="Punjab Local Government Ordinance 2016">Punjab Local Government Ordinance 2016</option>
+                            <option value="One Wheeling Act">One Wheeling Act</option>
+                            <option value="Loud Speaker Act">Loud Speaker Act</option>
+                            <option value="Secretarianism">Secretarianism</option>
+                            <option value="Anti-terrorism Act 1997 Ata">Anti-terrorism Act 1997 Ata</option>
+                            <option value="Punjab Marriage Function ordinance 2016">Punjab Marriage Function ordinance 2016</option>
+                            <option value="Tresspassing">Tresspassing</option>
+                            <option value="Ehtram-e-Ramzan">Ehtram-e-Ramzan</option>
+                            <option value="Smoking Health Ordinance">Smoking Health Ordinance</option>
+                            <option value="Blind Murder">Blind Murder</option>
+                            <option value="382 PPC">382 PPC</option>
+                            <option value="Telephone Act">Telephone Act</option>
+                            <option value="Car Snatching">Car Snatching</option>
+                            <option value="Illegal Gas Cylinder Act">Illegal Gas Cylinder Act</option>
+                            <option value="Kidnapping Minors">Kidnapping Minors</option>
+                            <option value="Dacoity/Robbery with Murder">Dacoity/Robbery with Murder</option>
+                            <option value="Habs e Beja">Habs e Beja</option>
+                            <option value="Dacoity">Dacoity</option>
+                            <option value="Punjab Food Authority Act 2011">Punjab Food Authority Act 2011</option>
+                            <option value="Cigrette Act">Cigrette Act</option>
+                            <option value="Gang Rape">Gang Rape</option>
+                            <option value="Police Order Act">Police Order Act</option>
+                            <option value="Kidnap for Ransom">Kidnap for Ransom</option>
+                            <option value="Dengue Act">Dengue Act</option>
+                            <option value="New Punjab Local Govt Ord 2011">New Punjab Local Govt Ord 2011</option>
+                            <option value="Police Encounter">Police Encounter</option>
+                            <option value="LDA Act 1975">LDA Act 1975</option>
+                            <option value="Punjab Fertilizers Control Act">Punjab Fertilizers Control Act</option>
+                            <option value="Prohibition of Expressing Matters on Walls Act 1995">Prohibition of Expressing Matters on Walls Act 1995</option>
+                            <option value="Copyright Act">Copyright Act</option>
+                            <option value="Touheen Quran Act">Touheen Quran Act</option>
+                            <option value="Local Government Act">Local Government Act</option>
+                            <option value="New Punjab Pure Food Ord 1960">New Punjab Pure Food Ord 1960</option>
+                            <option value="Petrolium Act 1934">Petrolium Act 1934</option>
+                            <option value="The Punjab Prohibition of Child Labour at Brick KIlns Ordinance 2016">The Punjab Prohibition of Child Labour at Brick KIlns Ordinance 2016</option>
+                            <option value="Punjab Animal Slaughter Control Act">Punjab Animal Slaughter Control Act</option>
+                            <option value="Protection of Pakistan Ordinance 2013">Protection of Pakistan Ordinance 2013</option>
+                            <option value="Regulation and Control of Loudspeakers and Amplifiers">Regulation and Control of Loudspeakers and Amplifiers</option>
+                            <option value="Canal Cut">Canal Cut</option>
+                            <option value="The Anti Terrorism Act (ATA),1997">The Anti Terrorism Act (ATA),1997</option>
+                            <option value="Other Vehicle Snatching">Other Vehicle Snatching</option>
+                            <option value="Tree Theft Act">Tree Theft Act</option>
+                            <option value="Railway Act">Railway Act</option>
+                            <option value="Punjab University Broads Act">Punjab University Broads Act</option>
+                        </select>
+                    </div>
+                                    
+                    <div class="form-group-sm col-sm-6" style="margin-top: 5px;">
+                        <label for="model">Model</label>
+                        <select name="model" id="model" class="form-control" required>
+                            <option value="month ">Month</option>
+                        </select>
+                    </div>                
+
+                    <div class="col-md-12" style="margin-top: 5px;">
+                        <button class="btn btn-outline-success btn-sm" id="submit" type="submit" style="margin-top: 5px;">
+                            <i class="fa fa-database" aria-hidden="true">Create Case</i>
+                        </button>            
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->

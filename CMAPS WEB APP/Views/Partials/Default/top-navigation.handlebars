@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="hnet.com-image.ico" style="width:5%; height: 5%; padding-right: 5px; " alt="icon" >
+        <a class="navbar-brand" href="/" style="padding-left: 5px;">CMAP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto" >
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ANALYSIS</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item" href="/reportGraphs" style="color: gray;">Graphs</a>
+                        <div class="dropdown-divider" ></div>
+                        <a class="dropdown-item" href="/reportCharts" style="color: gray;">Charts</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MAP</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item" href="/map" style="color: gray;">Combined Map</a>
+                        <div class="dropdown-divider" ></div>
+                        <a class="dropdown-item" href="/mapTwo" style="color: gray;">Map 2018</a>
+                        <a class="dropdown-item" href="/mapThree" style="color: gray;">Map 2019</a>
+                        <a class="dropdown-item" href="/mapFour" style="color: gray;">Heat Map</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PREDICTION</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item" href="/prediction" style="color: gray;">Predict Offence Category</a>
+                        <div class="dropdown-divider" ></div>
+                        <a class="dropdown-item" href="/predictionTwo" style="color: gray;">Predict Day for a Particular Crime</a>
+                        <a class="dropdown-item" href="/predictionThree" style="color: gray;">Predict Month for a Particular Crime</a>
+                        <a class="dropdown-item" href="/predictionFour" style="color: gray;">Predict Area for a Particular Crime</a>
+                    </div>
+                </li>
+
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin Portal</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout [{{user.firstName}}]
+                    </a>
+                </li>
+                {{else}} 
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
