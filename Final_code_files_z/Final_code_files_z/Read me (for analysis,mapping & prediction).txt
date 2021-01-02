@@ -1,0 +1,42 @@
+The project includes several files for separate modules. 
+However, all files begin with the same libraries for ease.
+
+REQUIREMENTS: 
+Packages in envirnoment Anaconda3
+Python version 3.8.1
+Jupyter Core: 4.5.0
+Jupyter -notebook: 6.0.0
+ipython: 7.6.1
+
+Libraries:
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+
+import os
+import scipy
+import string
+import pickle
+import warnings
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from astropy.table import Table, Column
+import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split
+import folium
+import matplotlib.pyplot as plt
+import seaborn as sns
+import chardet
+from sklearn import preprocessing
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score
+
+You may need to install ceratin packages before importing
+some libraries if you don't already have them.
