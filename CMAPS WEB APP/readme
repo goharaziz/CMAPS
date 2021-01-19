@@ -1,2 +1,0 @@
-type npm init then type npm run
-if all dependecies are not installed then install the remaining and then type npm run again.
